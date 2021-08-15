@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Enquire Stops
+{% endblock %}
+	
+{% block main %}
+	<h1 class="display-4">Real-time Bus Arrival Timing</h1>
+	<form action="/enquirestops", method="post">
+		<div class="form-group">
+			<input class="form-control" name="busstopcode" placeholder="Bus Stop Code" type="number" required>
+		</div>
+		<div class="form-group">
+			<input class="form-control" name="serviceno" placeholder="Bus Service Number" type="text">
+		</div>
+		<button class="btn btn-primary" type="submit">Search</button>
+	</form>
+
+{% endblock %}
+	

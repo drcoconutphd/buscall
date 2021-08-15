@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Enquire Services
+{% endblock %}
+	
+{% block main %}
+	<h1 class="display-4">Service Route</h1>
+	<form action="/enquireservices", method="post">
+		<div class="form-group">
+			<input class="form-control" name="serviceno" placeholder="Bus Service Number" type="text" required >
+		</div>
+		<button class="btn btn-primary" type="submit">Search</button>
+	</form>
+
+{% endblock %}
+	

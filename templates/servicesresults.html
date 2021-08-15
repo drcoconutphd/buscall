@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Services
+{% endblock %}
+	
+{% block main %}
+	<br>
+	<h1 class="display-4">Bus Services Information</h1>
+	<h4>Service Number: {{ serviceno }}</h4>
+	<h6>Service Type: {{ servicetype }}</h6>
+	<br>
+	<table class="table table-control">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">Bus Stop Code</th>
+				<th scope="col">Description</th>
+				<th scope="col">Street Name</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for i in stops %}
+			<tr>
+				<th>
+					{{ i[0] }}
+				</th>
+				<td>
+					{{ i[2] }}
+				</td>
+				<td>
+					{{ i[1] }}
+				</td>				
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+	
+{% endblock %}
